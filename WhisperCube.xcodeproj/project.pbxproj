@@ -11,6 +11,13 @@
 		1410EC782B8CDDA30007CE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410EC772B8CDDA30007CE39 /* ContentView.swift */; };
 		1410EC7A2B8CDDA40007CE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1410EC792B8CDDA40007CE39 /* Assets.xcassets */; };
 		1410EC7D2B8CDDA40007CE39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1410EC7C2B8CDDA40007CE39 /* Preview Assets.xcassets */; };
+		1410EC862B8CE37D0007CE39 /* whisper in Frameworks */ = {isa = PBXBuildFile; productRef = 1410EC852B8CE37D0007CE39 /* whisper */; };
+		1410EC892B8CE3A30007CE39 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = 1410EC882B8CE3A30007CE39 /* HotKey */; };
+		1410EC8C2B8CE4720007CE39 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410EC8B2B8CE4720007CE39 /* LibWhisper.swift */; };
+		1410EC8F2B8CE4F00007CE39 /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410EC8E2B8CE4F00007CE39 /* WhisperState.swift */; };
+		1410EC922B8CE5320007CE39 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410EC912B8CE5320007CE39 /* Recorder.swift */; };
+		1410EC942B8CE5410007CE39 /* RiffWaveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1410EC932B8CE5410007CE39 /* RiffWaveUtils.swift */; };
+		14FCFF132B8CF2CF003D75E3 /* models in Resources */ = {isa = PBXBuildFile; fileRef = 14FCFF122B8CF2CF003D75E3 /* models */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,11 @@
 		1410EC792B8CDDA40007CE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1410EC7C2B8CDDA40007CE39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1410EC7E2B8CDDA40007CE39 /* WhisperCube.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhisperCube.entitlements; sourceTree = "<group>"; };
+		1410EC8B2B8CE4720007CE39 /* LibWhisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
+		1410EC8E2B8CE4F00007CE39 /* WhisperState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperState.swift; sourceTree = "<group>"; };
+		1410EC912B8CE5320007CE39 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		1410EC932B8CE5410007CE39 /* RiffWaveUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiffWaveUtils.swift; sourceTree = "<group>"; };
+		14FCFF122B8CF2CF003D75E3 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1410EC892B8CE3A30007CE39 /* HotKey in Frameworks */,
+				1410EC862B8CE37D0007CE39 /* whisper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +50,7 @@
 		1410EC692B8CDDA30007CE39 = {
 			isa = PBXGroup;
 			children = (
+				1410EC8A2B8CE44E0007CE39 /* LibWhisper */,
 				1410EC742B8CDDA30007CE39 /* WhisperCube */,
 				1410EC732B8CDDA30007CE39 /* Products */,
 			);
@@ -53,7 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				1410EC752B8CDDA30007CE39 /* WhisperCubeApp.swift */,
-				1410EC772B8CDDA30007CE39 /* ContentView.swift */,
+				1410EC962B8CE5DF0007CE39 /* UI */,
+				1410EC952B8CE5840007CE39 /* Resources */,
+				1410EC902B8CE5230007CE39 /* Utils */,
+				1410EC8D2B8CE4D60007CE39 /* Models */,
 				1410EC792B8CDDA40007CE39 /* Assets.xcassets */,
 				1410EC7E2B8CDDA40007CE39 /* WhisperCube.entitlements */,
 				1410EC7B2B8CDDA40007CE39 /* Preview Content */,
@@ -67,6 +85,47 @@
 				1410EC7C2B8CDDA40007CE39 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1410EC8A2B8CE44E0007CE39 /* LibWhisper */ = {
+			isa = PBXGroup;
+			children = (
+				1410EC8B2B8CE4720007CE39 /* LibWhisper.swift */,
+			);
+			path = LibWhisper;
+			sourceTree = "<group>";
+		};
+		1410EC8D2B8CE4D60007CE39 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1410EC8E2B8CE4F00007CE39 /* WhisperState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1410EC902B8CE5230007CE39 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1410EC912B8CE5320007CE39 /* Recorder.swift */,
+				1410EC932B8CE5410007CE39 /* RiffWaveUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1410EC952B8CE5840007CE39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14FCFF122B8CF2CF003D75E3 /* models */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1410EC962B8CE5DF0007CE39 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1410EC772B8CDDA30007CE39 /* ContentView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +144,10 @@
 			dependencies = (
 			);
 			name = WhisperCube;
+			packageProductDependencies = (
+				1410EC852B8CE37D0007CE39 /* whisper */,
+				1410EC882B8CE3A30007CE39 /* HotKey */,
+			);
 			productName = WhisperCube;
 			productReference = 1410EC722B8CDDA30007CE39 /* WhisperCube.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +176,10 @@
 				Base,
 			);
 			mainGroup = 1410EC692B8CDDA30007CE39;
+			packageReferences = (
+				1410EC842B8CE37D0007CE39 /* XCRemoteSwiftPackageReference "whisper.cpp" */,
+				1410EC872B8CE3A30007CE39 /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = 1410EC732B8CDDA30007CE39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +196,7 @@
 			files = (
 				1410EC7D2B8CDDA40007CE39 /* Preview Assets.xcassets in Resources */,
 				1410EC7A2B8CDDA40007CE39 /* Assets.xcassets in Resources */,
+				14FCFF132B8CF2CF003D75E3 /* models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +207,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1410EC922B8CE5320007CE39 /* Recorder.swift in Sources */,
+				1410EC8F2B8CE4F00007CE39 /* WhisperState.swift in Sources */,
 				1410EC782B8CDDA30007CE39 /* ContentView.swift in Sources */,
+				1410EC8C2B8CE4720007CE39 /* LibWhisper.swift in Sources */,
 				1410EC762B8CDDA30007CE39 /* WhisperCubeApp.swift in Sources */,
+				1410EC942B8CE5410007CE39 /* RiffWaveUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +353,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Need to transcribe audio";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -309,6 +382,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Need to transcribe audio";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -343,6 +417,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1410EC842B8CE37D0007CE39 /* XCRemoteSwiftPackageReference "whisper.cpp" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ggerganov/whisper.cpp.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1410EC872B8CE3A30007CE39 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1410EC852B8CE37D0007CE39 /* whisper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1410EC842B8CE37D0007CE39 /* XCRemoteSwiftPackageReference "whisper.cpp" */;
+			productName = whisper;
+		};
+		1410EC882B8CE3A30007CE39 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1410EC872B8CE3A30007CE39 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1410EC6A2B8CDDA30007CE39 /* Project object */;
 }
